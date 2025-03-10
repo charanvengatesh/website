@@ -25,7 +25,7 @@ export default function Page() {
           {[
             {
               logo: "/amazon.png",
-              role: "Software Development Engineering Intern",
+              role: "Software Engineering Intern",
               company: "Amazon",
               date: "Incoming",
             },
@@ -60,9 +60,32 @@ export default function Page() {
                 <p className="text-lg text-gray-300 w-1/3">{company}</p>
                 <p className="text-md text-gray-400 w-1/3 text-right">{date}</p>
               </div>
-              
-          </div>
-            
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section */}
+
+      {/* create a card for each project */}
+      <section className="p-10">
+        <h2 className="text-4xl font-bold mb-8">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "TXBus",
+              description: "Bus route app simplied.",
+              image: "/TXBus.jpeg",
+            },
+          ].map(({ title, description, image }, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl"
+            >
+              <Image src={image} alt={title} width={400} height={200} />
+              <h3 className="text-xl font-semibold mt-4">{title}</h3>
+              <p className="text-gray-300 mt-2">{description}</p>
+            </div>
           ))}
         </div>
       </section>

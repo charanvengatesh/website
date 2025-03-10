@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* make a dark background */
+body {
+  background-color: #000;
+  color: #fff;
+}
